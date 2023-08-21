@@ -483,7 +483,9 @@ a.main-link::after {
 }
 
 /* For devices with x2 density */
-@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .dark-bg-hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
