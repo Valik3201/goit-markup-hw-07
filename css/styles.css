@@ -278,20 +278,25 @@ a.main-link::after {
 } */
 
 .subscribe-btn {
+  /* Display and Box Model */
   display: inline-flex;
   padding: 8px 24px;
+  gap: 16px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  cursor: pointer;
   border: none;
   outline: none;
+  cursor: pointer;
   border-radius: 4px;
+
+  /* Background and Text Styling */
   background-color: var(--iris, #4d5ae5);
   color: var(--white, #fff);
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.64px;
+
+  /* Transition */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -329,23 +334,26 @@ a.main-link::after {
 }
 
 .primary-btn {
+  /* Display and Box Model */
   display: block;
-  border-radius: 4px;
-  background: var(--iris, #4d5ae5);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 16px 32px;
-  cursor: pointer;
+  border-radius: 4px;
   border: none;
   outline: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-  /* Button Text */
+  /* Background and Text Styling */
+  background: var(--iris, #4d5ae5);
   color: var(--white, #fff);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5em; /* 150% */
   letter-spacing: 0.64px;
+  text-align: center;
 
+  /* Transition */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -355,22 +363,26 @@ a.main-link::after {
 }
 
 .filter-btn {
-  padding: 12px 24px 12px;
-  border-radius: 4px;
+  /* Box Model */
+  padding: 12px 24px;
   border: 1px solid var(--cornflower, #e7e9fc);
+  border-radius: 4px;
   outline: none;
+
+  /* Background and Cursor */
   background: var(--cloud, #f4f4fd);
   cursor: pointer;
 
-  /* Button Text */
+  /* Text Styling */
   color: var(--iris, #4d5ae5);
-  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5em; /* 150% */
   letter-spacing: 0.64px;
+  text-align: center;
 
+  /* Transitions */
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -468,6 +480,17 @@ a.main-link::after {
   max-width: 1440px;
   margin: 0 auto;
   padding: 188px 0;
+}
+
+/* For devices with x2 density */
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .dark-bg-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office@2x.jpg);
+  }
 }
 
 .hero-container {
