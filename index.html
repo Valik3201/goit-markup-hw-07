@@ -41,6 +41,23 @@
     <header class="top-line">
       <div class="header-container container">
         <!-- Navbar -->
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            aria-label="Charm Menu - Hamburger (for Mobile)"
+            fill="currentColor"
+          >
+            <use href="images/icons.svg#icon-charm-menu-hamburger"></use>
+          </svg>
+        </button>
+
         <nav class="container nav-menu-section">
           <a href="#" class="logo logo-header"
             ><span class="text-color-iris">WEB</span>STUDIO</a
@@ -795,7 +812,30 @@
     </div>
     <!-- End modal window -->
 
+    <!-- Mobile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="8"
+          height="8"
+          aria-label="Close Button"
+          fill="currentColor"
+        >
+          <use href="images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">Studio</a></li>
+        <li><a href="portfolio.html" class="link">Portfolio</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+    </div>
+    <!-- End Mobile Menu -->
+
     <!-- Script -->
+    <script src="js/mobile-menu.js"></script>
     <script src="js/modal.js"></script>
   </body>
 </html>
