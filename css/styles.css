@@ -137,8 +137,7 @@ button:focus {
 /* Site navigation */
 
 .top-line {
-  height: 72px;
-  padding: 24px 0;
+  padding: 24px 0 23px 0;
   border-bottom: 1px solid var(--cornflower, #e7e9fc);
 }
 
@@ -146,23 +145,10 @@ button:focus {
   margin-right: 76px;
 }
 
-.header-container {
-  display: flex;
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 .nav-menu-section {
   display: flex;
   align-items: center;
   margin-left: 0;
-}
-
-@media (max-width: 767px) {
-  .nav-menu-section {
-    display: none;
-  }
 }
 
 .nav-items {
@@ -200,75 +186,8 @@ a.main-link::after {
   border-radius: 2px;
   background-color: var(--ocean, #404bbf);
   position: absolute;
-  bottom: -3px;
+  bottom: -4px;
   left: 0;
-}
-
-/* Mobile Site Navigation */
-
-.menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-}
-
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 32px;
-  background-color: #3f51b5;
-  z-index: 999;
-
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
-}
-
-.menu-container.is-open {
-  transform: translateX(0);
-}
-
-.menu-container .menu-toggle {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  color: #fff;
-}
-
-.mobile-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.mobile-menu .link {
-  display: block;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
 }
 
 /* Site Footer */
@@ -496,12 +415,6 @@ a.main-link::after {
 
 .contacts-items a:active {
   color: var(--iris, #4d5ae5);
-}
-
-@media (max-width: 767px) {
-  .contacts-items {
-    display: none;
-  }
 }
 
 .social-media-icons {
@@ -1002,4 +915,132 @@ label {
 .send-btn:hover,
 .send-btn:focus {
   background-color: var(--ocean, #404bbf);
+}
+
+/* Mobile Site Navigation */
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media (min-width: 480px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  background-color: var(--white, #fff);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  margin-bottom: 40px;
+  color: var(--navyblue, #2e2f42);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.mobile-contacts-items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.mobile-contacts-items li a {
+  list-style: none;
+  color: currentColor;
+  text-decoration: none;
+}
+
+.mobile-contacts-items li:first-child {
+  color: var(--iris, #4d5ae5);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+
+.mobile-contacts-items li:last-child {
+  color: var(--slate, #434455);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px;
+}
+
+@media (max-width: 479px) {
+  .nav-items,
+  .contacts-items {
+    display: none;
+  }
+
+  .top-line {
+    padding: 15px 0 14px 0;
+  }
+
+  .nav-menu-section {
+    margin: 0 auto;
+  }
+
+  .logo-header {
+    margin-right: 249px;
+  }
+
+  .close-btn {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .social-media-icons {
+    gap: 56px;
+    justify-content: space-between;
+  }
+
+  .social-media-icons svg {
+    padding: 8px;
+  }
 }
