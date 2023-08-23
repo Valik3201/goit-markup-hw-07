@@ -148,6 +148,7 @@ button:focus {
 .nav-menu-section {
   display: flex;
   align-items: center;
+  margin: 0 auto;
   margin-left: 0;
 }
 
@@ -931,7 +932,7 @@ label {
   outline: none;
 }
 
-@media (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .menu-toggle {
     display: none;
   }
@@ -970,6 +971,10 @@ label {
   list-style: none;
 }
 
+.mobile-menu li:first-child {
+  margin-top: 40px;
+}
+
 .mobile-menu .link {
   display: block;
   margin-bottom: 40px;
@@ -980,6 +985,10 @@ label {
   letter-spacing: 0.72px;
   text-transform: capitalize;
   text-decoration: none;
+}
+
+.mobile-menu li a.mobile-menu-active {
+  color: var(--ocean, #404bbf);
 }
 
 .mobile-contacts-items {
@@ -999,7 +1008,7 @@ label {
   color: var(--iris, #4d5ae5);
   font-size: 36px;
   font-weight: 700;
-  line-height: 40px; /* 111.111% */
+  line-height: 1.11; /* 111.111% */
   letter-spacing: 0.72px;
   text-transform: capitalize;
 }
@@ -1008,39 +1017,53 @@ label {
   color: var(--slate, #434455);
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px; /* 120% */
+  line-height: 1.2; /* 120% */
   letter-spacing: 0.4px;
 }
 
-@media (max-width: 479px) {
-  .nav-items,
-  .contacts-items {
-    display: none;
+@media screen and (max-width: 479px) {
+  .container {
+    min-width: 320px;
+    padding: 0 16px;
   }
 
   .top-line {
     padding: 15px 0 14px 0;
   }
 
-  .nav-menu-section {
-    margin: 0 auto;
+  .logo-header {
+    margin: 0;
   }
 
-  .logo-header {
-    margin-right: 249px;
+  .nav-items,
+  .contacts-items {
+    display: none;
   }
 
   .close-btn {
+    margin-left: auto;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .social-media-icons {
     gap: 56px;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .social-media-icons svg {
     padding: 8px;
+  }
+
+  .heading-main {
+    font-size: 36px;
+    line-height: 1.11; /* 111.111% */
+    letter-spacing: 0.72px;
+  }
+}
+
+@media screen and (max-width: 394px) {
+  .mobile-contacts-items li:first-child {
+    font-size: 30px;
   }
 }
