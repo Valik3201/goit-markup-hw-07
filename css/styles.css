@@ -303,7 +303,7 @@ a.main-link::after {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 24px;
-    width: 76vw;
+    width: 586px;
   }
 }
 
@@ -856,10 +856,11 @@ a.main-link::after {
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .team-items-section {
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     row-gap: 64px;
+    width: 552px;
+    margin: 0 auto;
   }
 }
 
@@ -923,6 +924,13 @@ a.main-link::after {
   .customer-item {
     flex-wrap: wrap;
     row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers-section {
+    width: 720px;
+    margin: 0 auto;
   }
 }
 
