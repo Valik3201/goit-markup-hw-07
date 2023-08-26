@@ -1041,10 +1041,10 @@ a.main-link::after {
   position: absolute;
   top: 24px;
   right: 24px;
-  width: 24px;
-  height: 24px;
+  padding: 8px;
   cursor: pointer;
 
+  fill: var(--navyblue, #2e2f42);
   background-color: var(--cornflower, #e7e9fc);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -1060,9 +1060,9 @@ a.main-link::after {
 
 .close-btn:hover,
 .close-btn:focus {
+  fill: var(--white, #fff);
   background-color: var(--ocean, #404bbf);
   border-color: var(--ocean, #404bbf);
-  fill: var(--white, #fff);
 }
 
 /* Form  */
@@ -1268,7 +1268,7 @@ label {
 
 @media screen and (max-width: 479px) {
   #mobile-menu .close-btn {
-    margin-left: auto;
+    padding: 8px;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
