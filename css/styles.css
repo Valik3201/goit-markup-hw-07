@@ -1372,6 +1372,11 @@ label {
   color: var(--ocean, #404bbf);
 }
 
+.mobile-menu li a:hover,
+.mobile-menu li a:focus {
+  color: var(--ocean, #404bbf);
+}
+
 .mobile-contacts-items {
   display: flex;
   flex-direction: column;
