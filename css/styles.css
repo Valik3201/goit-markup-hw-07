@@ -940,8 +940,10 @@ a.main-link::after {
 }
 
 @media screen and (max-width: 479px) {
-  .project-card-item {
+  .project-card-item,
+  .project-card-item img {
     width: calc(100vw - 32px);
+    height: auto;
   }
 }
 
@@ -1334,17 +1336,11 @@ label {
 
 .mobile-contacts-items li:first-child {
   color: var(--iris, #4d5ae5);
-  font-size: 36px;
+  font-size: 8vw;
   font-weight: 700;
   line-height: 1.11; /* 111.111% */
   letter-spacing: 0.72px;
   text-transform: capitalize;
-}
-
-@media screen and (max-width: 394px) {
-  .mobile-contacts-items li:first-child {
-    font-size: 30px;
-  }
 }
 
 .mobile-contacts-items li:last-child {
