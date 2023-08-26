@@ -373,6 +373,10 @@ a.main-link::after {
     width: calc(100vw - 32px);
     opacity: 0.3;
   }
+
+  .subscribe-section input:focus {
+    opacity: 0.7;
+  }
 }
 
 .subscribe-section input::placeholder {
@@ -853,8 +857,14 @@ a.main-link::after {
 @media screen and (max-width: 479px) {
   .customer-item svg {
     padding: 16px 40px;
-    width: 190px;
+    width: calc(50vw - 24px);
     height: 88px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .customer-item svg {
+    width: 170px;
   }
 }
 
@@ -987,6 +997,13 @@ a.main-link::after {
   z-index: 1;
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    width: calc(100vw - 36px);
+    height: auto;
+  }
+}
+
 .modal,
 .backdrop {
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -1035,6 +1052,13 @@ a.main-link::after {
   max-width: 360px;
   margin: 0 auto;
   margin-top: 72px;
+}
+
+@media screen and (max-width: 479px) {
+  #contact-form {
+    width: calc(100vw - 68px);
+    padding-bottom: 24px;
+  }
 }
 
 label {
@@ -1107,6 +1131,12 @@ label {
   outline: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .form-wrapper-textarea textarea {
+    width: calc(100vw - 68px);
+  }
 }
 
 .form-wrapper-textarea textarea:focus {
