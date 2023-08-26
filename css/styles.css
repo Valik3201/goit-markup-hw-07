@@ -883,9 +883,23 @@ a.main-link::after {
   margin-bottom: 72px;
 }
 
+@media screen and (max-width: 479px) {
+  .filter-buttons {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 48px;
+  }
+}
+
 .portfolio-container {
   padding-top: 96px;
   padding-bottom: 120px;
+}
+
+@media screen and (max-width: 479px) {
+  .portfolio-container {
+    padding: 48px 0;
+  }
 }
 
 .portfolio-section {
@@ -923,6 +937,12 @@ a.main-link::after {
   width: calc((100% - 48px) / 3);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .project-card-item {
+    width: calc(100vw - 32px);
+  }
 }
 
 .project-card-caption {
